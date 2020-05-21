@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".ui.dashboard.ChatFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="8"
+        android:layout_above="@+id/linear"></androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="10"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:layout_height="1dp">
+        <EditText
+            android:id="@+id/txtMsg"
+            android:layout_width="1dp"
+            android:layout_weight="9"
+            android:layout_height="40dp"
+            android:hint="type your message here">
+        </EditText>
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_weight="1"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_send_black_24dp">
+        </ImageButton>
+    </LinearLayout>
+</LinearLayout>
